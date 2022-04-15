@@ -1,25 +1,20 @@
-# README
+# Open Candidates
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Description
 
-Things you may want to cover:
+This Web application is a SPA (Single Page Application). It is Ruby on Rails as a backend and React.JS as a frontend based application.
+Users can conveniently find details of clients or candidates using the search bar. Given data has been seeded(saved) in DB(SQL3)
 
-* Ruby version
 
-* System dependencies
+## Installation 
+### Backend Setup
+- Open the file and `cd` into `open-candidates-v1`
+- `bundle install` in your terminal.
+- `rails db:migrate` and `rails db:seed` 
+- Type `rails s` in your terminal to set up a local server.
 
-* Configuration
+### Frontend Setup
+- Open another terminal and `cd` into `open-candidates` (react directory)
+- Type `yarn start` in your terminal to set up a local server.
 
-* Database creation
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# data-piper
