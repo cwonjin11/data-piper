@@ -1,33 +1,36 @@
 import React from 'react'
 
 function Clients(props) {
-  console.log(props)
+  // console.log(props)
   return (
     <div>
         <table>
-          <tr>
-            <th>Name</th>
-            <th>Role</th>
-            <th>Urgency</th>
-            <th>Quantity</th>
-            <th>Skills Needed</th>
-            <th>Candidate</th>
-            <th>Email</th>
-          </tr>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Role</th>
+              <th>Urgency</th>
+              <th>Quantity</th>
+              <th>Skills Needed</th>
+              <th>Candidate</th>
+              <th>Email</th>
+            </tr>
+          </thead>
+        <tbody>
         {props.clients.map((client) => {
-        return ( 
-          <tr key={client.id}>
-            <td>{client.name}</td>
-            <td>{client.role}</td>
-            <td>{client.urgency}</td>
-            <td>{client.quantity}</td>
-            <td>{client.skills_needed}</td>
-            <td>{client.candidate}</td>
-            <td>{client.email}</td>
-          </tr>
-       
+          return ( 
+              <tr key={client.id}>
+                <td>{client.name}</td>
+                <td>{client.role}</td>
+                <td>{client.urgency}</td>
+                <td>{client.quantity}</td>
+                <td>{client.skills_needed}</td>
+                <td>{client.candidate}</td>
+                <td>{client.email}</td>
+              </tr>
         )
-      })}
+        })}
+        </tbody>
        </table>
     </div>
 

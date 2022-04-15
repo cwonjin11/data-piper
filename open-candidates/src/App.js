@@ -4,41 +4,47 @@ import axios from 'axios'
 import Clients from "./components/clients"
 import { useEffect, useState } from 'react';
 
-
+// API URL from rails backend. // app/controllers/api/v1/clients_controller.rb
 const API_URL = "http://localhost:3000/api/v1/clients"
 
+// Used Axios to make asynchronous HTTP request
 const getAPIData = () => {
-  return axios.get(API_URL).then((response) => response.data)
+  return axios.get(API_URL)
+  .then((response) => response.data)
 }
 
 
 const App = () => {
+  // useStack hook implemented to add React state to function.
   const [clients, setClients] = useState([])
   const [input, setInput] = useState("")
   const [output, setOutput] = useState([])
 
-
   useEffect( ()=> {
     let mounted = true
-    getAPIData().then((client) => {
-      if(mounted){
-        setClients(client)
-      }
+    getAPIData()
+      .then((client) => {
+        if(mounted){
+          setClients(client)
+        }
     })
+
     return () =>(mounted = false) 
   }, [])
 
-
+  // The effect hook used to perform side effects in function components
+  // to tell React component needs to do something after render.
   useEffect( () => {
     setOutput([])
     // eslint-disable-next-line array-callback-return
-    clients.filter( (val) => {
-      if(val.candidate.toLowerCase().includes(input.toLowerCase()) ||
+    clients.filter( (val) => {  // JS filter method to have a search function
+      if(val.candidate.toLowerCase().includes(input.toLowerCase()) || //make input lower case and check if val.candidate includes it.
       val.name.toLowerCase().includes(input.toLowerCase()) ||
       val.email.toLowerCase().includes(input.toLowerCase()))
       {
-        setOutput(output => [...output,val])
+        setOutput(output => [...output, val])
       }
+      
     })
   }, [clients, input])
 

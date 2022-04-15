@@ -3,7 +3,7 @@
 ## Description
 
 This Web application is a SPA (Single Page Application), built with Ruby on Rails as a backend and React.JS as a frontend.
-Users can conveniently find details of clients or candidates using the search bar. Given data has been seeded(saved) in DB(SQL3)
+Users can conveniently find details of clients or candidates using the search bar. Given data has been seeded(saved) in DB(SQLite)
 
 
 ## Installation 
