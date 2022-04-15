@@ -41,10 +41,15 @@
 } */
 
 body {
-  background: linear-gradient(135deg, rgba(6,147,227,1) 0%,rgb(1, 5, 232) 100%);
+  background: linear-gradient(135deg, rgba(6,147,227,0.8) 0%,rgb(1, 5, 232, 0.95) 100%), 
+  URL(http://datapiper.com/wp-content/themes/datapiper/assets/images/homepage/images/banner/banner-background.png),
+  URL(http://datapiper.com/wp-content/themes/datapiper/assets/images/homepage/images/banner/waves.png);
+  background-size:cover;
+  /* background-image: URL(http://datapiper.com/wp-content/themes/datapiper/assets/images/homepage/images/banner/banner-background.png); */
   color: white;
   min-height: 100vh;
   justify-content: center;
+  /* background-size:cover; */
   /* align-items: center;  */
   /* display: flex; */
 }
@@ -57,12 +62,9 @@ h2, p {
   text-align: left;
 }
 
-
-
 .App {
   text-align: center;
 }
-
 
 .Search input {
   height: 30px;

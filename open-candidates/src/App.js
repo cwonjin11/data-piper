@@ -12,7 +12,6 @@ const getAPIData = () => {
 }
 
 
-
 const App = () => {
   const [clients, setClients] = useState([])
   const [input, setInput] = useState("")
@@ -48,12 +47,12 @@ const App = () => {
   return (
     <div className="App">
 
-      <h1>Clients and Candidates Lists</h1>
+      <h1>Clients and Candidates</h1>
 
         <div className="Search">
           <input 
             type="text"
-            placeholder="Search by Clients or Candidates" 
+            placeholder="Search by clients / candidates / email..." 
             onChange={ e => setInput(e.target.value)}
           />
         </div>

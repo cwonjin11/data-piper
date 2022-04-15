@@ -13,7 +13,7 @@ clients = Client.create([
         quantity: 1,
         skills_needed: "Java,Springboot Docker/Kubernetes, API/microservices/ Cloud",
         candidate: "Maria Rodriguez",
-        email: "M.RD43@datapipert"
+        email: "M.RD43@datapipertech.com"
     },
     {
         name: "PwC",
@@ -22,7 +22,7 @@ clients = Client.create([
         quantity: 1,
         skills_needed: "Java,Springboot Docker/Kubernetes, API/microservices/ Cloud",
         candidate: "Maria Rodriguez",
-        email: "M.RD43@datapipert"
+        email: "M.RD43@datapipertech.com"
     },
     {
         name: "PwC",
