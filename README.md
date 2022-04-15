@@ -16,5 +16,6 @@ Users can conveniently find details of clients or candidates using the search ba
 ### Frontend Setup
 - Open another terminal and `cd` into `open-candidates` (react directory)
 - Type `yarn start` in your terminal to set up a local server.
+- if you see "Something is already running on port 3000. Would you like to run the app on another port instead?" message, type `y`
 
 
