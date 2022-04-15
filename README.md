@@ -1,5 +1,7 @@
 # Open Candidates
 
+## Demo Video
+[Link to Video](https://drive.google.com/file/d/1suc1PvJTxOS_l4GamMHt2FxBbUcKKnXN/view?usp=sharing)
 ## Description
 
 This Web application is a SPA (Single Page Application), built with Ruby on Rails as a backend and React.JS as a frontend.
