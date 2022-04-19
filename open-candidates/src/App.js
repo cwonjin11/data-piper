@@ -4,9 +4,10 @@ import axios from 'axios'
 import Clients from "./components/clients"
 import { useEffect, useState } from 'react';
 
-// API URL from rails backend. // app/controllers/api/v1/clients_controller.rb
+// Declare API URL from rails backend. // app/controllers/api/v1/clients_controller.rb
 const API_URL = "http://localhost:3000/api/v1/clients"
 
+// create a function to get the API data
 // Used Axios to make asynchronous HTTP request
 const getAPIData = () => {
   return axios.get(API_URL)
@@ -14,22 +15,24 @@ const getAPIData = () => {
 }
 
 
+
 const App = () => {
+  //create state
   // useStack hook implemented to add React state to function.
-  const [clients, setClients] = useState([])
+  const [clients, setClients] = useState([]) // it will  import { useState } from 'react'; above //initialize with empty array
   const [input, setInput] = useState("")
   const [output, setOutput] = useState([])
 
-  useEffect( ()=> {
-    let mounted = true
+  useEffect( ()=> { //component needs to do something after render.
+    let mounted = true //assuming component is mounted
     getAPIData()
-      .then((client) => {
+      .then((clients) => {
         if(mounted){
-          setClients(client)
+          setClients(clients)
         }
     })
 
-    return () =>(mounted = false) 
+    return () =>(mounted = false)  // (If component is called or When cleanup is called, toggle he variable mounted to false
   }, [])
 
   // The effect hook used to perform side effects in function components
